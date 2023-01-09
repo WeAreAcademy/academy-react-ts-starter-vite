@@ -1,5 +1,6 @@
 import App from "./App";
-import { render, screen, userEvent } from "./utils/test-utils";
+import { render, screen } from "./utils/test-utils";
+import React from "react"
 
 //An example of using react-testing-library
 test("Input", async () => {

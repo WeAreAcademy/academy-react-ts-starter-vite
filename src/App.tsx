@@ -1,3 +1,4 @@
+import React from "react"
 import { greet } from "./greet";
 import { MyComponent } from "./MyComponent";
 

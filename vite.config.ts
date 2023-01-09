@@ -8,7 +8,8 @@ import eslint from 'vite-plugin-eslint'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), eslint()],
+  // currently seems to require you manually reload the app ?
+  plugins: [eslint(), react()],
   test: {
     globals: true,
     environment: 'jsdom',

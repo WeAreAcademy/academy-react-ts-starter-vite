@@ -1,12 +1,19 @@
-import { useEffect } from "react";
+import { useEffect } from "react"
 
-export function MyComponent(): JSX.Element {
-  function foo(myArg) {
+interface MyComponentProps {
+  stuff: string;
+}
+export function MyComponent(props: MyComponentProps): JSX.Element {
+  function foo(myArg: number) {
+    console.log(props.stuff);
+    console.log(myArg);
 
   }
   useEffect(() => {
-    foo();
+    foo(17);
   }, []);
 
-  return <div>Here is my component</div>;
+  return <div>Here is my component
+
+  </div>;
 }
