@@ -1,7 +1,7 @@
 {
   "name": "academy-react-starter-vite",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,7 @@
     "format": "prettier --write src",
     "format:check": "prettier --check src",
     "preview": "vite preview",
-    "test": "vitest",
+    "test": "vitest --no-watch",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {

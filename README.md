@@ -34,3 +34,7 @@ Add `src/utils/test-utils.ts` from `https://github.com/vitest-dev/vitest/blob/ma
 -   Set up CI (github actions)
 
 add `.github/workflows/ci.yaml` - will only do a subset of tasks, initially
+
+-   add prettier
+
+`yarn add -D prettier`
