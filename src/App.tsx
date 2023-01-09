@@ -1,9 +1,13 @@
+import { greet } from "./greet"
+import { MyComponent } from "./MyComponent"
 
 function App() {
 
   return (
     <div className="App">
-      Hello world
+      <MyComponent />
+
+      {greet("scholar")}
     </div>
   )
 }
