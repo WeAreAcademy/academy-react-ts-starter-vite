@@ -4,6 +4,7 @@ interface MyComponentProps {
   stuff: string;
 }
 export function MyComponent(props: MyComponentProps): JSX.Element {
+
   function foo(myArg: number) {
     console.log(props.stuff);
     console.log(myArg);
@@ -14,6 +15,6 @@ export function MyComponent(props: MyComponentProps): JSX.Element {
   }, []);
 
   return <div>Here is my component
-
+    stuff: {props.stuff}
   </div>;
 }
