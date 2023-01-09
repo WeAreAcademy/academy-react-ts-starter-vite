@@ -13,12 +13,12 @@ jobs:
             - uses: actions/checkout@v3
             - name: Install modules
               run: yarn
-            # - name: Check formatting with Prettier
-            #   run: yarn format:check
+            - name: Check formatting with Prettier
+              run: yarn format:check
             # - name: Check quality with ESLint
             #   run: yarn lint
-            # - name: Check types compile
-            #   run: yarn type-check
+            - name: Check types compile
+              run: yarn type-check
             - name: Check tests pass
               run: yarn test
             - name: Check app builds
