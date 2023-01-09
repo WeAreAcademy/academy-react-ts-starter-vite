@@ -30,3 +30,7 @@ Add `src/test/setup.ts` with following content, following the new `vite.config.t
 To tsconfig.json add `"types": ["vitest/globals"]` - TODO: is the above a required step?
 
 Add `src/utils/test-utils.ts` from `https://github.com/vitest-dev/vitest/blob/main/examples/react-testing-lib/src/utils/test-utils.tsx`
+
+-   Set up CI (github actions)
+
+add `.github/workflows/ci.yaml` - will only do a subset of tasks, initially
