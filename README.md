@@ -19,6 +19,13 @@ yarn create vite academy-react-starter-vite --template react-ts
 
 Add test script in package.json (to run vitest)
 
+### Simplest testing setup - if you're not testing react components
+
+* Add vitest only: `yarn add -D vitest`
+* Then in each test import: `import { describe, test, expect } from 'vitest';`
+
+### Fuller testing setup - to allow testing react components
+
 Add vitest and jsdom, and @testing-library/react and others:
 `yarn add -D vitest jsdom @testing-library/jest-dom @testing-library/react @testing-library/user-event @vitejs/plugin-react`
 
