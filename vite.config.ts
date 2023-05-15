@@ -11,7 +11,7 @@ import eslint from "vite-plugin-eslint";
 export default defineConfig({
     // currently seems to require you manually reload the app ?
     plugins: [
-        eslint(),
+        // eslint(),
         react(),
         checker({
             typescript: true,
