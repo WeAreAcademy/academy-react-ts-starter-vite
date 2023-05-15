@@ -1,10 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { MyComponent2 } from "./MyComponent2";
 
 interface MyComponentProps {
     stuff: string;
 }
 export function MyComponent(props: MyComponentProps): JSX.Element {
+    const [showMyComponent2, setShowMyComponent2] = useState(false);
+    const x: number = "foo";
+
     function foo(myArg: number) {
         console.log(props.stuff);
         console.log(myArg);
@@ -16,7 +19,11 @@ export function MyComponent(props: MyComponentProps): JSX.Element {
     return (
         <div>
             Here is my component stuff: {props.stuff}
-            <MyComponent2 />
+            <hr />
+            <button onClick={() => setShowMyComponent2((p) => !p)}>
+                toggle
+            </button>
+            {showMyComponent2 ? <MyComponent2 /> : <div>other stuff</div>}
         </div>
     );
 }
