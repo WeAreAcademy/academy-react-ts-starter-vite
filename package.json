@@ -4,7 +4,7 @@
   "version": "0.0.2",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npx concurrently \"vite\" \"tsc --noEmit --watch\"",
     "build": "tsc && vite build",
     "format": "prettier --write src",
     "format:check": "prettier --check src",
