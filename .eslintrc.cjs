@@ -13,10 +13,23 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     "plugin:react-hooks/recommended",
+
+    //react-app is from facebook's from Create React App
+    //I think we have most of it from elsewhere, but not everything.
+    // eqeqeq: "warn"
+    "react-app",
+
+    //react-app/jest is also from facebook's from Create React App
+    //but based on https://github.com/jest-community/eslint-plugin-jest/
+    // "react-app/jest", 
+
     //linting of ES2015+ (ES6+) import/export syntax, and prevent issues with misspelling of file paths and import names
     'plugin:import/recommended',
+
     //accessibility rules on JSX elements
     'plugin:jsx-a11y/recommended',
+
+    //https://typescript-eslint.io/getting-started
     'plugin:@typescript-eslint/recommended',
 
     //(no thanks!)
@@ -49,7 +62,10 @@ module.exports = {
     "react/jsx-uses-react": "off", // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
     "react/react-in-jsx-scope": "off", // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint,
 
-    // "indent": "error"
+    //In production you might want to change these:
+    "no-debugger": "off",
+    // "no-console": ["error", { allow: ["warn", "error"] }]
+
     //TODO: don't disallow this - it SHOULD adjust to TypeScript, but doesn't at the moment
     //"Note: You can provide types in runtime types using PropTypes and/or statically using TypeScript or Flow. This rule will validate your prop types regardless of how you define them."
     // "react/prop-types": "off"
