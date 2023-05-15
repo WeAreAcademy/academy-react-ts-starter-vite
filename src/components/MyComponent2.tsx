@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const [bad, setBad] = useState(3);
 
-function MyComponent2(): JSX.Element {
+export function MyComponent2(): JSX.Element {
     const x = true;
     if (x) {
         const [x, setX] = useState(10);
