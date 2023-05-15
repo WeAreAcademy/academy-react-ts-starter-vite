@@ -16,10 +16,10 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:@typescript-eslint/recommended',
+
     // This disables the formatting rules in ESLint that Prettier is going to be responsible for handling.
     // Make sure it's always the last config, so it gets the chance to override other configs.
-
-    // 'eslint-config-prettier',
+    'eslint-config-prettier',
   ],
   settings: {
     react: {
@@ -43,10 +43,9 @@ module.exports = {
     "react/jsx-uses-react": "off", // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
     "react/react-in-jsx-scope": "off", // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint,
 
-
+    // "indent": "error"
     //TODO: don't disallow this - it SHOULD adjust to TypeScript, but doesn't at the moment
     //"Note: You can provide types in runtime types using PropTypes and/or statically using TypeScript or Flow. This rule will validate your prop types regardless of how you define them."
     // "react/prop-types": "off"
-
   },
 };
