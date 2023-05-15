@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export function MyComponent2(): JSX.Element {
-    const myNum: string = 10;
     const flag = true;
     if (flag) {
         //lint should complain - violation of rules of hooks
