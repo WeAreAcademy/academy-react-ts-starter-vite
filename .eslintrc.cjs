@@ -13,9 +13,15 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     "plugin:react-hooks/recommended",
+    //linting of ES2015+ (ES6+) import/export syntax, and prevent issues with misspelling of file paths and import names
     'plugin:import/recommended',
+    //accessibility rules on JSX elements
     'plugin:jsx-a11y/recommended',
     'plugin:@typescript-eslint/recommended',
+
+    //(no thanks!)
+    //Runs Prettier as an ESLint rule and reports differences as individual ESLint issues
+    // 'plugin:prettier/recommended' 
 
     // This disables the formatting rules in ESLint that Prettier is going to be responsible for handling.
     // Make sure it's always the last config, so it gets the chance to override other configs.
