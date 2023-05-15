@@ -1,10 +1,9 @@
 export function MyComponent3(): JSX.Element {
-    //This should fail to type-check
-    const myNum: string = 10;
+    const myNum = 10;
 
     return (
         <div>
-            {MyComponent3.name}
+            <h2>{MyComponent3.name}</h2>
             <hr />
             {myNum}
         </div>

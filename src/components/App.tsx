@@ -4,7 +4,7 @@ import { MyComponent } from "./MyComponent";
 function App() {
     return (
         <div className="App">
-            <MyComponent />
+            <MyComponent stuff={"blah"} />
 
             {greet("scholar")}
         </div>
