@@ -1,5 +1,6 @@
 import { greet } from "../greet";
 import { MyComponent } from "./MyComponent";
+import "./App.css";
 
 function App() {
     return (
