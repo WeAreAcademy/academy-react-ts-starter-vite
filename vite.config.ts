@@ -16,7 +16,9 @@ export default defineConfig({
         react(),
         checker({
             typescript: true,
-            eslint: { lintCommand: "lint src" },
+            eslint: {
+                lintCommand: "eslint src/**/*.ts src/**/*.tsx",
+            },
         }),
     ],
     test: {
