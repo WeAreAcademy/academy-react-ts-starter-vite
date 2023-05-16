@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "vite",
-    "dev-fancy": "npx concurrently 'vite' 'tsc --noEmit --watch'",
+    "dev": "vite --port 3000",
+    "dev-fancy": "npx concurrently 'vite --port 3000' 'tsc --noEmit --watch'",
     "format": "prettier --write src",
     "format:check": "prettier --check src",
     "lint": "eslint --max-warnings=0 src",
