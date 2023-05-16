@@ -61,11 +61,19 @@ module.exports = {
   rules: {
     // Add your own rules here to override ones from the extended configs.
 
-    //So that we don't need to import React just to use JSX
+    //So that we don't need to import React just to use JSX - enabled by  eslint-plugin-react
     "react/jsx-uses-react": "off", // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
     "react/react-in-jsx-scope": "off", // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint,
 
+    //So that we can write html with certain characters - e.g. <p>Dragon's Lair</p>  - without getting grief
+    "react/no-unescaped-entities": "off",
+
+    //Disabling some of import/recommended to avoid writing import type {foo}
+    "import/no-unresolved": "off",
+    "import/named": "off",
+
     //In production you might want to change these:
+    "@typescript-eslint/no-non-null-assertion": "off",
     "no-debugger": "off",
     // "no-console": ["error", { allow: ["warn", "error"] }]
 
