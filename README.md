@@ -1,5 +1,31 @@
 # React app (Vite)
 
+## Feature summary
+
+-   React app
+-   TypeScript
+-   CI with GitHub Actions
+-   eslint and custom config
+-   Formatting with prettier
+-   Testing with vitest and react-testing-library
+-   vscode debugger launch config
+-   Vite
+    -   Type-checking and linting errors presented into the browser (vite-plugin-checker)
+-   As little other junk as possible
+
+## Attaching the vscode javascript debugger to your react app (in dev)
+
+(This is meant an alternative to the excellent chrome devtools)
+
+-   Start the dev server (e.g. yarn dev)
+-   In vscode, switch to the "Run and debug" tab from the side menu
+-   At the top, click the green play button entitled "Launch Chrome against localhost"
+    -   Browser should also launch, eventually
+-   Add breakpoint(s) to your react code in vscode, or add the `debugger` keyword
+-   Interact with the React app so that your breakpoints / `debugger` keyword are encountered.
+-   vscode's debugger should now present you with the local variables, the call stack, etc.
+-   Use the transport controls at the top to step through your code or continue execution
+
 ## Vite learning notes
 
 -   [Vite guide](https://vitejs.dev/guide/)
@@ -38,9 +64,9 @@ Install the [vscode eslint extension](https://marketplace.visualstudio.com/items
 
 If you already have it installed you may have to reload vscode after you've made the .eslintrc (or at least run the command `developer:reload window` or `ESLint: Restart ESLint Server`), before the editor shows you linting problems.
 
-Vite will not show the linting errors in the browser, rather in the dev console output.
+Vite will not show the linting errors in the browser unless they're error level. You can see warnings in the dev console output.
 
-You may have to cause the offending file to be loaded/reloaded before the linting error is emitted.
+(You may have to cause the offending file to be loaded/reloaded before the linting error is emitted.)
 
 ## Testing Setup
 
