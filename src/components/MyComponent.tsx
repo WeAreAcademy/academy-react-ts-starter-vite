@@ -8,11 +8,15 @@ interface MyComponentProps {
 export function MyComponent(props: MyComponentProps): JSX.Element {
     const [isToggled, setToggled] = useState(false);
 
+    function handleButton() {
+        setToggled((p) => !p);
+    }
+
     return (
         <div>
             Here is my component stuff: {props.stuff}
             <hr />
-            <button onClick={() => setToggled((p) => !p)}>toggle</button>
+            <button onClick={handleButton}>toggle</button>
             {isToggled ? <MyComponent3 /> : <div>other stuff</div>}
             {isToggled ? <MyComponent2 /> : <div>other stuff</div>}
         </div>
