@@ -1,5 +1,8 @@
 module.exports = {
 
+  // consider picking a config from a well-known company:
+  //https://github.com/dustinspecker/awesome-eslint#configs
+
   //env: "Which environments your script is designed to run in. Each environment brings with it a certain set of predefined global variables."
   //Remember: the node dev server doesn't itself run in the browser but is a node program.
   //without this, module.exports at the top of this file is not accepted by eslint.  (we could have the linter ignore it)
