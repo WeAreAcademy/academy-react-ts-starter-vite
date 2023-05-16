@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import { MyComponent2 } from "./MyComponent2";
 import { MyComponent3 } from "./MyComponent3";
 
@@ -7,18 +7,6 @@ interface MyComponentProps {
 }
 export function MyComponent(props: MyComponentProps): JSX.Element {
     const [isToggled, setToggled] = useState(false);
-
-    const fooFn = useCallback(
-        function (myArg: number) {
-            console.log(props.stuff);
-            console.log(myArg);
-        },
-        [props.stuff]
-    );
-    fooFn(17);
-    useEffect(() => {
-        console.log("useEffect called");
-    }, [fooFn]);
 
     return (
         <div>
