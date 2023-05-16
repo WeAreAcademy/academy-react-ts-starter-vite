@@ -4,9 +4,9 @@
   "version": "0.0.2",
   "type": "module",
   "scripts": {
+    "build": "tsc && vite build",
     "dev": "vite",
     "dev-fancy": "npx concurrently 'vite' 'tsc --noEmit --watch'",
-    "build": "tsc && vite build",
     "format": "prettier --write src",
     "format:check": "prettier --check src",
     "lint": "eslint --max-warnings=0 src",
