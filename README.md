@@ -30,6 +30,7 @@
 
 -   [Vite guide](https://vitejs.dev/guide/)
 -   [About the `public` directory](https://vitejs.dev/guide/assets.html#the-public-directory)
+-   [Vite powerful React project setup](https://dev.to/equiman/vite-powerful-react-project-g4m) (Camilo Martinez)
 
 ## Creation history
 
