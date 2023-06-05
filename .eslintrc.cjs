@@ -61,6 +61,8 @@ module.exports = {
   rules: {
     // Add your own rules here to override ones from the extended configs.
 
+    // "@typescript-eslint/no-unused-vars": "off"
+
     //So that we don't need to import React just to use JSX - enabled by  eslint-plugin-react
     "react/jsx-uses-react": "off", // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
     "react/react-in-jsx-scope": "off", // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint,
