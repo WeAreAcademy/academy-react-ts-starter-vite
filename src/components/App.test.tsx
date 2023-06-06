@@ -1,16 +1,11 @@
-import { act, render, screen } from "../utils/test-utils";
+import { render, screen } from "../testUtils/testUtils";
 import App from "./App";
 
 //An example of using react-testing-library
 describe("App component", async () => {
-    test("should render have a button on it", () => {
+    test("Should have text Hello, World on it", () => {
         render(<App />);
-
-        const button = screen.getByText("toggle");
-        expect(button).toBeInTheDocument();
-        act(() => {
-            button.click();
-        });
-        expect(screen.getAllByText("MyComponent2")[0]).toBeInTheDocument();
+        const elem = screen.getByText("Hello, World");
+        expect(elem).toBeInTheDocument();
     });
 });

@@ -87,12 +87,12 @@ Add vitest and jsdom, and @testing-library/react and others:
 
 Update vite.config.ts [see vitetest + react-testing-lib example](https://github.com/vitest-dev/vitest/blob/main/examples/react-testing-lib/vite.config.ts)
 
-Add `src/test/setup.ts` with following content, following the new `vite.config.ts` from above:
+Add `testSetup/setup.ts` with following content, following the new `vite.config.ts` from above:
 `import '@testing-library/jest-dom'`
 
 To tsconfig.json add `"types": ["vitest/globals"]` - TODO: is the above a required step?
 
-Add `src/utils/test-utils.ts` from `https://github.com/vitest-dev/vitest/blob/main/examples/react-testing-lib/src/utils/test-utils.tsx`
+Add `src/testUtils/testUtils.ts` from `https://github.com/vitest-dev/vitest/blob/main/examples/react-testing-lib/src/utils/test-utils.tsx`
 
 -   Set up CI (github actions)
 
