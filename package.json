@@ -1,12 +1,11 @@
 {
   "name": "academy-react-starter-vite",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite --port 3000",
-    "dev-fancy": "npx concurrently 'vite --port 3000' 'tsc --noEmit --watch'",
     "format": "prettier --write src index.html",
     "format:check": "prettier --check src index.html",
     "lint": "eslint --max-warnings=0 src",
