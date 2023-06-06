@@ -1,13 +1,64 @@
 # React app (Vite)
 
+## Installation
+
+```
+yarn
+```
+
+## Running dev server
+
+```
+yarn dev
+```
+
+This will start a local server listening for http requests on port 3000.
+
+It will also ask your browser to open a tab to `http://localhost:3000/`
+
+Any type-check and linting errors will appear in the browser and in the terminal output as you browse.
+
+## Relaxing complains from ESLint
+
+If you find lint is too strict, you can edit the rules section of [.eslintrc.cjs](.eslintrc.cjs).
+
+## Building and previewing a static version of your app:
+
+This process is normally performed automatically by a build&host service such as Netlify or Vercel.
+
+However, you can [run it yourself](https://vitejs.dev/guide/static-deploy.html#building-the-app) to observe the outputs.
+
+```
+yarn build
+```
+
+This will bundle your many source files into very few in `dist/`, ready for deployment on a web server. As part of the process, it will convert your TypeScript files into JavaScript, using the TypeScript compiler, `tsc`.
+
+If you've run a local build, you can start a local server to host those files, using:
+
+```
+yarn preview
+```
+
+## Automatic Deployment with Netlify
+
+See [Netlify with Git](https://vitejs.dev/guide/static-deploy.html#building-the-app)
+or more generally, ["Deploying a Static Site" in the Vite Guide](https://vitejs.dev/guide/static-deploy.html).
+
+## Other scripts
+
+See [package.json](package.json) for other scripts.
+
 ## Feature summary
 
--   React app
+-   React app (hot-reloaded when you make changes)
 -   TypeScript
--   CI with GitHub Actions
--   eslint and custom config
+-   ESLint and custom config
 -   Formatting with prettier
--   Testing with vitest and react-testing-library
+-   Testing with
+    -   vitest (jest-equivalent) and
+    -   react-testing-library
+-   CI with GitHub Actions
 -   vscode debugger launch config
 -   Vite
     -   Type-checking and linting errors presented into the browser (vite-plugin-checker)
@@ -15,7 +66,7 @@
 
 ## Attaching the vscode javascript debugger to your react app (in dev)
 
-(This is meant an alternative to the excellent chrome devtools)
+(This is meant as an optional alternative to the excellent chrome devtools.)
 
 -   Start the dev server (e.g. yarn dev)
 -   In vscode, switch to the "Run and debug" tab from the side menu
@@ -26,78 +77,16 @@
 -   vscode's debugger should now present you with the local variables, the call stack, etc.
 -   Use the transport controls at the top to step through your code or continue execution
 
-## Vite learning notes
+## Alternative to vite-plugin-checker
+
+If you don't want to use vite-plugin-checker but you do want to get type-checking errors in the terminal, you can run dev and type-check at the same time by adding this script to package.json:
+
+```
+"dev-and-type-check": "npx concurrently 'vite --port 3000' 'tsc --noEmit --watch'"
+```
+
+## Misc notes on Vite
 
 -   [Vite guide](https://vitejs.dev/guide/)
 -   [About the `public` directory](https://vitejs.dev/guide/assets.html#the-public-directory)
 -   [Vite powerful React project setup](https://dev.to/equiman/vite-powerful-react-project-g4m) (Camilo Martinez)
-
-## Creation history
-
--   Created initially with vite, with a react-ts template
-
-```bash
-yarn create vite academy-react-starter-vite --template react-ts
-```
-
--   Removed all unnecessary css and JSX
-
-## Linting Setup
-
-```
-yarn add -D vite-plugin-eslint eslint eslint-config-react-app
-touch .eslintrc
-```
-
-Contents for .eslintrc:
-
-```
-{
-    "extends": [
-        "react-app"
-    ]
-}
-```
-
-### Observing linting reportings:
-
-Install the [vscode eslint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) to see linting errors highlit in the editor.
-
-If you already have it installed you may have to reload vscode after you've made the .eslintrc (or at least run the command `developer:reload window` or `ESLint: Restart ESLint Server`), before the editor shows you linting problems.
-
-Vite will not show the linting errors in the browser unless they're error level. You can see warnings in the dev console output.
-
-(You may have to cause the offending file to be loaded/reloaded before the linting error is emitted.)
-
-## Testing Setup
-
--   Set up testing:
-
-Add test script in package.json (to run vitest)
-
-### Simplest testing setup - if you're not testing react components
-
--   Add vitest only: `yarn add -D vitest`
--   Then in each test import: `import { describe, test, expect } from 'vitest';`
-
-### Fuller testing setup - to allow testing react components
-
-Add vitest and jsdom, and @testing-library/react and others:
-`yarn add -D vitest jsdom @testing-library/jest-dom @testing-library/react @testing-library/user-event @vitejs/plugin-react`
-
-Update vite.config.ts [see vitetest + react-testing-lib example](https://github.com/vitest-dev/vitest/blob/main/examples/react-testing-lib/vite.config.ts)
-
-Add `testSetup/setup.ts` with following content, following the new `vite.config.ts` from above:
-`import '@testing-library/jest-dom'`
-
-To tsconfig.json add `"types": ["vitest/globals"]` - TODO: is the above a required step?
-
-Add `src/testUtils/testUtils.ts` from `https://github.com/vitest-dev/vitest/blob/main/examples/react-testing-lib/src/utils/test-utils.tsx`
-
--   Set up CI (github actions)
-
-add `.github/workflows/ci.yaml` - will only do a subset of tasks, initially
-
--   add prettier
-
-`yarn add -D prettier`
