@@ -78,9 +78,5 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": "off",
     "no-debugger": "off",
     // "no-console": ["error", { allow: ["warn", "error"] }]
-
-    //TODO: don't disallow this - it SHOULD adjust to TypeScript, but doesn't at the moment
-    //"Note: You can provide types in runtime types using PropTypes and/or statically using TypeScript or Flow. This rule will validate your prop types regardless of how you define them."
-    // "react/prop-types": "off"
   },
 };
