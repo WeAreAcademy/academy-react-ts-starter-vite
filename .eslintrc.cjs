@@ -60,6 +60,7 @@ module.exports = {
   },
   rules: {
     // Add your own rules here to override ones from the extended configs.
+    // Note: You may have to restart your dev server for these changes to take effect
 
     // "@typescript-eslint/no-unused-vars": "off"
     // "@typescript-eslint/ban-ts-comment": "off",  //allows @ts-ignore
