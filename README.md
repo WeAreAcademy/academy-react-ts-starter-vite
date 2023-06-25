@@ -9,7 +9,7 @@ yarn
 ## Running dev server
 
 ```
-yarn dev
+yarn start
 ```
 
 This will start a local server listening for http requests on port 3000.
@@ -68,7 +68,7 @@ See [package.json](package.json) for other scripts.
 
 (This is meant as an optional alternative to the excellent chrome devtools.)
 
--   Start the dev server (e.g. yarn dev)
+-   Start the dev server (e.g. yarn start)
 -   In vscode, switch to the "Run and debug" tab from the side menu
 -   At the top, click the green play button entitled "Launch Chrome against localhost"
     -   Browser should also launch, eventually

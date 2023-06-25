@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "vite --port 3000",
+    "start": "vite --port 3000",
     "format": "prettier --write src index.html",
     "format:check": "prettier --check src index.html",
     "lint": "eslint --max-warnings=0 src",
