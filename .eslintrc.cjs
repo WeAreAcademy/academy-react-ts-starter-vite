@@ -58,11 +58,9 @@ module.exports = {
     rules: {
         // Add your own rules here to override ones from the extended configs.
         // Note: You may have to restart your dev server for these changes to take effect
-
-        // "@typescript-eslint/no-unused-vars": "off"
-        // "@typescript-eslint/ban-ts-comment": "off",  //allows @ts-ignore
-
-        // Allow use of 'any' in type annotations.  A last resort.
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "off", //let's handle this in typescript instead
+        "@typescript-eslint/ban-ts-comment": "off", //allows @ts-ignore
         // "@typescript-eslint/no-explicit-any": "off",
 
         //So that we don't need to import React just to use JSX - enabled by  eslint-plugin-react
