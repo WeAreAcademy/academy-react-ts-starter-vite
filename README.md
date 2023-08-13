@@ -18,6 +18,14 @@ It will also ask your browser to open a tab to `http://localhost:3000/`
 
 Any type-check and linting errors will appear in the browser and in the terminal output as you browse.
 
+## Getting type-check and lint errors into vscode's problem list
+
+Run the default build task in vscode using ctrl-shift-B (or mac: Cmd-shift-B)
+This will run first type-checking and if that passes will then run eslint.
+VSCode's problems list will be populated with errors from the first of those tasks to fail.
+
+This is configured in .vscode/tasks.json
+
 ## Relaxing complains from ESLint
 
 If you find lint is too strict, you can edit the rules section of [.eslintrc.cjs](.eslintrc.cjs).
@@ -59,6 +67,7 @@ See [package.json](package.json) for other scripts.
     -   vitest (jest-equivalent) and
     -   react-testing-library
 -   CI with GitHub Actions
+-   vscode default build task configured (in tasks.json) to type-check and lint to problems list
 -   vscode debugger launch config
 -   Vite
     -   Type-checking and linting errors presented into the browser (vite-plugin-checker)
