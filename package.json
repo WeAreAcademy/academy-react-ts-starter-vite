@@ -13,7 +13,8 @@
         "test": "vitest --no-watch --reporter verbose",
         "test:watch": "vitest --reporter verbose",
         "test:gui": "vitest --ui",
-        "type-check": "tsc --noEmit"
+        "type-check": "tsc --noEmit",
+        "check-all": "yarn type-check && yarn lint && yarn format && yarn test"
     },
     "dependencies": {
         "react": "^18.2.0",
