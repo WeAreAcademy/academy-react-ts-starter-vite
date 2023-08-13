@@ -4,6 +4,15 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "type-check-and-lint",
+            "dependsOn": ["type-check", "lint"],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             //this is npm even if you're using yarn
             "type": "npm",
             //which script in package.json to run
@@ -13,8 +22,7 @@
             "problemMatcher": "$tsc",
             //make this the default build task (often mapped as ctrl-shift-b)
             "group": {
-                "kind": "build",
-                "isDefault": true
+                "kind": "build"
             },
             //
             "presentation": {
@@ -22,6 +30,19 @@
                 "revealProblems": "onProblem",
                 //otherwise, don't open the terminal with tsc's happy output
                 //comment this out if you are debugging this task
+                "reveal": "silent"
+            }
+        },
+        {
+            "type": "npm",
+            "script": "lint",
+            "group": {
+                "kind": "build"
+            },
+            "problemMatcher": ["$eslint-stylish"],
+            "label": "lint",
+            "presentation": {
+                "revealProblems": "onProblem",
                 "reveal": "silent"
             }
         }
