@@ -30,7 +30,8 @@
                 "revealProblems": "onProblem",
                 //otherwise, don't open the terminal with tsc's happy output
                 //comment this out if you are debugging this task
-                "reveal": "silent"
+                "reveal": "silent",
+                "close": true
             }
         },
         {
@@ -43,7 +44,8 @@
             "label": "lint",
             "presentation": {
                 "revealProblems": "onProblem",
-                "reveal": "silent"
+                "reveal": "silent",
+                "close": true
             }
         }
     ]
