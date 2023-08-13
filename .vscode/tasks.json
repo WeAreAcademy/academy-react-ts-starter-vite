@@ -9,18 +9,19 @@
             "dependsOrder": "sequence",
             "group": {
                 "kind": "build",
+                //make this the default build task (often mapped as ctrl-shift-b)
                 "isDefault": true
             }
         },
         {
             //this is npm even if you're using yarn
             "type": "npm",
+            //label is used in menus and in the compound task above
+            "label": "type-check",
             //which script in package.json to run
             "script": "type-check",
-            "label": "type-check",
             //feed the output of tsc into vscode's "problems" list
             "problemMatcher": "$tsc",
-            //make this the default build task (often mapped as ctrl-shift-b)
             "group": {
                 "kind": "build"
             },
@@ -31,17 +32,18 @@
                 //otherwise, don't open the terminal with tsc's happy output
                 //comment this out if you are debugging this task
                 "reveal": "silent",
+                //close terminal after task runs
                 "close": true
             }
         },
         {
             "type": "npm",
+            "label": "lint",
             "script": "lint",
             "group": {
                 "kind": "build"
             },
             "problemMatcher": ["$eslint-stylish"],
-            "label": "lint",
             "presentation": {
                 "revealProblems": "onProblem",
                 "reveal": "silent",
