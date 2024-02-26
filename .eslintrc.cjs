@@ -32,7 +32,7 @@ module.exports = {
         "plugin:jsx-a11y/recommended",
 
         //https://typescript-eslint.io/getting-started
-        "plugin:@typescript-eslint/recommended",
+        // "plugin:@typescript-eslint/recommended",
 
         //(no thanks!)
         //Runs Prettier as an ESLint rule and reports differences as individual ESLint issues
