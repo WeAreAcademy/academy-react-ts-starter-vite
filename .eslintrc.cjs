@@ -32,7 +32,7 @@ module.exports = {
         "plugin:jsx-a11y/recommended",
 
         //https://typescript-eslint.io/getting-started
-        "plugin:@typescript-eslint/recommended",
+        // "plugin:@typescript-eslint/recommended",
 
         //(no thanks!)
         //Runs Prettier as an ESLint rule and reports differences as individual ESLint issues
@@ -78,5 +78,7 @@ module.exports = {
         "@typescript-eslint/no-non-null-assertion": "off",
         "no-debugger": "off",
         // "no-console": ["error", { allow: ["warn", "error"] }]
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
     },
 };
